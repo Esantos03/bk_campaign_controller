@@ -23,6 +23,7 @@ class CampanaSeeder extends Seeder
                     'apellido' => 'Pérez',
                     'telefono_whatsapp' => '1234567890',
                     'email' => 'juan@example.com',
+                    'profesion' => 'Arquitecto',
                     'estado' => EstadoCliente::ACTIVO,
                 ]),
                 Cliente::create([
@@ -30,6 +31,7 @@ class CampanaSeeder extends Seeder
                     'apellido' => 'González',
                     'telefono_whatsapp' => '0987654321',
                     'email' => 'maria@example.com',
+                    'profesion' => 'Programador',
                     'estado' => EstadoCliente::ACTIVO,
                 ]),
                 Cliente::create([
@@ -37,6 +39,7 @@ class CampanaSeeder extends Seeder
                     'apellido' => 'Rodríguez',
                     'telefono_whatsapp' => '5555555555',
                     'email' => 'carlos@example.com',
+                    'profesion' => 'Ingeniero',
                     'estado' => EstadoCliente::ACTIVO,
                 ]),
             ];

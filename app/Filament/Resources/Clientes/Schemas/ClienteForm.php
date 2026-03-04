@@ -37,6 +37,26 @@ class ClienteForm
                     ->email()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255),
+                Select::make('profesion')
+                    ->options([
+                        'Arquitecto' => 'Arquitecto',
+                        'Programador' => 'Programador',
+                        'Ingeniero' => 'Ingeniero',
+                        'Diseñador' => 'Diseñador',
+                        'Médico' => 'Médico',
+                        'Abogado' => 'Abogado',
+                        'Contador' => 'Contador',
+                        'Profesor' => 'Profesor',
+                        'Enfermero' => 'Enfermero',
+                        'Administrador' => 'Administrador',
+                        'Vendedor' => 'Vendedor',
+                        'Empresario' => 'Empresario',
+                        'Estudiante' => 'Estudiante',
+                        'Otro' => 'Otro',
+                    ])
+                    ->searchable()
+                    ->nullable()
+                    ->helperText('Selecciona la profesión del cliente'),
                 Select::make('estado')
                     ->options(EstadoCliente::class)
                     ->default('activo')

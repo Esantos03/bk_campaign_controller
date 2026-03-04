@@ -17,14 +17,31 @@ class ClientesTable
         return $table
             ->columns([
                 TextColumn::make('nombre')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('apellido')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('telefono_whatsapp')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Teléfono'),
                 TextColumn::make('email')
-                    ->label('Email address')
-                    ->searchable(),
+                    ->label('Email')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('profesion')
+                    ->searchable()
+                    ->sortable()
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'Arquitecto' => 'info',
+                        'Programador' => 'success',
+                        'Ingeniero' => 'warning',
+                        'Diseñador' => 'danger',
+                        'Médico' => 'primary',
+                        default => 'gray',
+                    })
+                    ->placeholder('Sin especificar'),
                 TextColumn::make('estado')
                     ->badge()
                     ->searchable(),
@@ -40,6 +57,25 @@ class ClientesTable
             ->filters([
                 SelectFilter::make('estado')
                     ->options(EstadoCliente::class),
+                SelectFilter::make('profesion')
+                    ->options([
+                        'Arquitecto' => 'Arquitecto',
+                        'Programador' => 'Programador',
+                        'Ingeniero' => 'Ingeniero',
+                        'Diseñador' => 'Diseñador',
+                        'Médico' => 'Médico',
+                        'Abogado' => 'Abogado',
+                        'Contador' => 'Contador',
+                        'Profesor' => 'Profesor',
+                        'Enfermero' => 'Enfermero',
+                        'Administrador' => 'Administrador',
+                        'Vendedor' => 'Vendedor',
+                        'Empresario' => 'Empresario',
+                        'Estudiante' => 'Estudiante',
+                        'Otro' => 'Otro',
+                    ])
+                    ->multiple()
+                    ->searchable(),
             ])
             ->recordActions([
                 EditAction::make(),

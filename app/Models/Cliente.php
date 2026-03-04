@@ -14,6 +14,7 @@ class Cliente extends Model
         'apellido',
         'telefono_whatsapp',
         'email',
+        'profesion',
         'estado',
     ];
 

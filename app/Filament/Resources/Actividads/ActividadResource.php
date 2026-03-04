@@ -18,7 +18,7 @@ class ActividadResource extends Resource
 {
     protected static ?string $model = Actividad::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendar;
 
     public static function form(Schema $schema): Schema
     {
