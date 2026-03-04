@@ -1,0 +1,364 @@
+{
+  "info": {
+    "_postman_id": "a7a2bf00-8b71-43c2-8516-a09de162c019",
+    "name": "Wasapi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7075994",
+    "_collection_link": "https://go.postman.co/collection/7075994-a7a2bf00-8b71-43c2-8516-a09de162c019?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/contacts/18294428902",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "22761|xBCKlXZLe91BDOx2dWQ60ke9aMRJr2t3ZIbyUkjL",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.wasapi.io/prod/api/v1/contacts/18294428902",
+          "protocol": "https",
+          "host": [
+            "api",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "prod",
+            "api",
+            "v1",
+            "contacts",
+            "18294428902"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://api.wasapi.io/prod/api/v1/whatsapp-numbers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "65853|X7le98KtKB5nKCj2ZavGgDrwAYjVIrK34uC6oI2f",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.wasapi.io/prod/api/v1/whatsapp-numbers",
+          "protocol": "https",
+          "host": [
+            "api",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "prod",
+            "api",
+            "v1",
+            "whatsapp-numbers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://api.wasapi.io/prod/api/v1/whatsapp-messages",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "22761|xBCKlXZLe91BDOx2dWQ60ke9aMRJr2t3ZIbyUkjL",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"message\": \"Prueba\",\r\n  \"wa_id\": \"18294428902\",\r\n  \"from_id\": 407233162480111\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.wasapi.io/prod/api/v1/whatsapp-messages",
+          "protocol": "https",
+          "host": [
+            "api",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "prod",
+            "api",
+            "v1",
+            "whatsapp-messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://api-ws.wasapi.io/api/v1/whatsapp-messages",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "25903|e6Gg8KcLHVeryRk6qQxAaUWBzDa9xDFkVqoj01Bz",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"message\": \"Esto es una prueba\", // Mensaje para enviar\r\n  \"wa_id\": \"18294428902\", // Número de telefono del destinatario \r\n  \"from_id\": 11640 //id de la cuenta de Whastapi\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-ws.wasapi.io/api/v1/whatsapp-messages",
+          "protocol": "https",
+          "host": [
+            "api-ws",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "whatsapp-messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Send Template",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "271367|8SH3XYzakLjQXvdpt17toALDCmyf2ofnrZpTM97F",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contact_type\": \"phone\",\r\n  \"recipients\": \"18294428902\",\r\n  \"template_id\": \"ec3a6588-27cb-4cab-8462-86304072b051\",\r\n  \"from_id\": 14184,\r\n  \"file\": \"document\",\r\n  \"url_file\": \"https://apiws.lbtechnologyrd.com/images/Invoice-TG3VSM4X-0005.pdf\",\r\n  \"file_name\": \"Invoives.pdf\",\r\n  \"body_vars\": [\r\n    {\r\n      \"text\": \"{{name}}\",\r\n      \"val\": \"Odalis Abreu\"\r\n    },\r\n    {\r\n      \"text\": \"{{date1}}\",\r\n      \"val\": \"05/06/87\"\r\n    },\r\n    {\r\n      \"text\": \"{{date2}}\",\r\n      \"val\": \"05/06/88\"\r\n    }\r\n  ],\r\n  \"chatbot_status\": \"enable\",\r\n  \"conversation_status\": \"hold\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-ws.wasapi.io/api/v1/whatsapp-messages/send-template",
+          "protocol": "https",
+          "host": [
+            "api-ws",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "whatsapp-messages",
+            "send-template"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://api.wasapi.io/prod/api/v1/labels",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "22761|xBCKlXZLe91BDOx2dWQ60ke9aMRJr2t3ZIbyUkjL",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.wasapi.io/prod/api/v1/labels",
+          "protocol": "https",
+          "host": [
+            "api",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "prod",
+            "api",
+            "v1",
+            "labels"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://api-ws.wasapi.io/api/v1/whatsapp-numbers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "271367|8SH3XYzakLjQXvdpt17toALDCmyf2ofnrZpTM97F",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api-ws.wasapi.io/api/v1/whatsapp-numbers",
+          "protocol": "https",
+          "host": [
+            "api-ws",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "whatsapp-numbers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://api-ws.wasapi.io/api/v1/contacts",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "25903|e6Gg8KcLHVeryRk6qQxAaUWBzDa9xDFkVqoj01Bz",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api-ws.wasapi.io/api/v1/contacts",
+          "protocol": "https",
+          "host": [
+            "api-ws",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "contacts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get  Template",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "271367|8SH3XYzakLjQXvdpt17toALDCmyf2ofnrZpTM97F",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api-ws.wasapi.io/api/v1/whatsapp-templates",
+          "protocol": "https",
+          "host": [
+            "api-ws",
+            "wasapi",
+            "io"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "whatsapp-templates"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cloud Sheet",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"token\": \"Admin2021*\",\r\n  \"nombre\": \"Juan Pérez\",\r\n  \"telefono\": \"+18091234567\",\r\n  \"email\": \"juan.perez@gmail.com\",\r\n  \"mensaje\": \"Activo\",\r\n  \"canal\": \"WhatsApp\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://script.google.com/macros/s/AKfycby-12TulLx6SMzv0HMdOqVLTCChgSeZsYmy7h_tAuZbVa_xd3gm_QNT_Onrh3bmJ9t4/exec",
+          "protocol": "https",
+          "host": [
+            "script",
+            "google",
+            "com"
+          ],
+          "path": [
+            "macros",
+            "s",
+            "AKfycby-12TulLx6SMzv0HMdOqVLTCChgSeZsYmy7h_tAuZbVa_xd3gm_QNT_Onrh3bmJ9t4",
+            "exec"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
